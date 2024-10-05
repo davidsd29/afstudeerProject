@@ -1,0 +1,261 @@
+:root {
+    /* Main */
+    --primary: #FFF;
+    --secondary: #08fdd8;
+    --tertiary: #e60de6;
+    --quaternary: #000;
+    --background: #000120;
+
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1400px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background-color: var(--background);
+    font-family: "Fredoka", sans-serif;
+    font-style: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+    font-style: inherit;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+.container {
+    max-width: var(--breakpoint-xl);
+    margin: 0 auto;
+}
+
+.btn {
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    width: fit-content;
+    border: none;
+    border-radius: 40px;
+    display: inline-block;
+    padding: 10px 30px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--tertiary);
+    color: var(--primary);
+}
+
+header{
+    width: 100vw;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header li {
+    border: none;
+    display: inline-block;
+    padding: 25px 0;
+    margin: 0 1em;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    
+}
+header nav a {
+    text-decoration: none;
+    color: var(--primary);
+    transition: 0.3s ease-in-out; 
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: var(--secondary);
+}
+
+.highlight {
+    color: var(--secondary);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper__header {
+    margin-top: 2em;
+}
+
+.wrapper__olympic {
+   gap: 3em;
+   position: relative;
+   align-items: start;
+}
+
+.image, .video {
+    background: #ccc;
+    position: relative;
+}
+
+.image::before, .image::after{
+    content: '';
+    top: 50%;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #4b4b4b;
+    rotate: 45deg;
+}
+
+.image::after {
+    rotate: -45deg;
+}
+
+video {
+    width: 100%;
+    height: 40%;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 40%;
+
+}
+
+.video-waze {
+    position: absolute;
+    background-color: #500150;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+}
+
+.image__small{
+    width: 100px;
+    height: 75px;
+}
+
+.image__large{
+    width: 250em;
+    height: 405px;
+}
+
+.video::before{
+    content: 'Video';
+    top: 10%;
+    position: absolute;
+    font-size: 20px;
+    background: none;
+}
+
+.video__hero {
+    padding: 2em;
+    width: 100%;
+    height: 79vh;
+}
+
+.title {
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.title__XLarge {
+    font-size: 70px;
+}
+
+.title__large {
+    font-size: 50px;
+}
+
+main >section {
+    margin-bottom: 5em;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.hero p {
+    font-size: 25px;
+}
+
+.hero .subtitle {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 2em;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.hero .overlay section {
+    margin: 0 auto;
+    padding: 1em;
+    display: grid;
+    gap: 1.3em;
+    width: 70%;
+}
+
+.olympic {
+    margin-bottom: 10em;
+}
+
+.olympic .subtitle {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 1em;
+}
+
+.olympic .btn {
+    position: absolute;
+    bottom: -15%;
+    left: 25%;
+}
